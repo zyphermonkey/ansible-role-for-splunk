@@ -1,4 +1,10 @@
 ---
+- name: Ensure UFW is Started and Enabled
+  systemd:
+    name: ufw
+    state: started
+    enabled: true
+
 - name: Configure ufw for Splunk
   become: true
   ufw:
