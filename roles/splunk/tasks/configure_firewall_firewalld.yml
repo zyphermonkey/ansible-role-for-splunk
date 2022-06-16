@@ -1,4 +1,10 @@
 ---
+- name: Ensure Firewalld is Started and Enabled
+  systemd:
+    name: firewalld
+    state: started
+    enabled: true
+
 - name: Configure firewalld for Splunk
   become: true
   firewalld:
